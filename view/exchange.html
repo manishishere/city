@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Currency Exchange Website</title>
+  <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="../bootstrap/css/exchange.css" rel="stylesheet">
+</head>
+<body class="body" ng-app="myApp" ng-controller="myCtrl">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand top" href="#">Exchange platform</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#">Exchange</a>
+          </li>
+          <li>
+            <a href="news.html">News</a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav><!-- ================nav-bar end==============================
+        ==================page 1 starts=========================== -->
+  <div class="p1">
+    <h4>Currency Exchange</h4>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail r1">
+          <div class="caption">
+            <div class="head1">
+              <h4>USD/JSP</h4>
+            </div>
+            <p></p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="sq">
+                  <div >
+                      <div class="no">{{ name }}</div>
+
+                      </div>
+                </div><a class="btn btn-primary b1" href="#" role=
+                "button">Bid</a>
+              </div>
+              <div class="col-md-6">
+                <div class="sq">
+                   <div class="no">{{ ask }}</div>
+                </div><a class="btn btn-default b2" href="#" role=
+                "button">Ask</a>
+              </div>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail r1">
+          <div class="caption">
+            <div class="head1">
+              <h4>USD/JSP</h4>
+            </div>
+            <p></p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="sq">
+                   <div >
+                      <div class="no">{{ name1 }}</div>
+                      </div>
+                </div><a class="btn btn-primary b1" href="#" role=
+                "button">Bid</a>
+              </div>
+              <div class="col-md-6">
+                <div class="sq">
+                <div class="no">{{ ask1 }}</div>
+                </div><a class="btn btn-default b2" href="#" role=
+                "button">Ask</a>
+              </div>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail r1">
+          <div class="caption">
+            <div class="head1">
+              <h4>USD/JSP</h4>
+            </div>
+            <p></p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="sq">
+
+                     <div class="no">{{ name2 }}</div>
+                      
+                  
+                </div><a class="btn btn-primary b1" href="#" role=
+                "button">Bid</a>
+              </div>
+              <div class="col-md-6">
+                <div class="sq">
+                   <div class="no">{{ ask }}</div>
+                </div><a class="btn btn-default b2" href="#" role=
+                "button">Ask</a>
+              </div>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail r1">
+          <div class="caption">
+            <div class="head1">
+              <h4>USD/JSP</h4>
+            </div>
+            <p></p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="sq">
+                  <div class="no">{{ name3 }}</div>
+                </div><a class="btn btn-primary b1" href="#" role=
+                "button">Bid</a>
+              </div>
+              <div class="col-md-6">
+                <div class="sq">
+                  <div class="no">{{ ask3 }}</div>
+                </div><a class="btn btn-default b2" href="#" role=
+                "button">Ask</a>
+              </div>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail r1">
+          <div class="caption">
+            <div class="head1">
+              <h4>USD/JSP</h4>
+            </div>
+            <p></p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="sq">
+                  <div class="no">{{ name4 }}</div>
+                </div><a class="btn btn-primary b1" href="#" role=
+                "button">Bid</a>
+              </div>
+              <div class="col-md-6">
+                <div class="sq">
+                  <div class="no">{{ ask4 }}</div>
+                </div><a class="btn btn-default b2" href="#" role=
+                "button">Ask</a>
+              </div>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail r1">
+          <div class="caption">
+            <div class="head1">
+              <h4>USD/JSP</h4>
+            </div>
+            <p></p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="sq">
+                  <div class="no">{{ name5 }}</div>
+                </div><a class="btn btn-primary b1" href="#" role=
+                "button">Bid</a>
+              </div>
+              <div class="col-md-6">
+                <div class="sq">
+                  <div class="no">{{ ask5 }}</div>
+                </div><a class="btn btn-default b2" href="#" role=
+                "button">Ask</a>
+              </div>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <!--   <div class="panel-heading"></div> -->
+    <!-- Table -->
+    <h5 style="margin-left:100px; ">Trasnsaction History</h5>
+    <center>
+      <table class="table">
+        <tr class="thead">
+          <th>Order</th>
+          <th>Currencies</th>
+          <th>Amount</th>
+          <th>Price</th>
+          <th>Date time</th>
+        </tr>
+        <tr>
+          <td>BUY</td>
+          <td>GPB / USD</td>
+          <td>20000</td>
+          <td>7,28373</td>
+          <td>2014/2/2 23:23:12</td>
+        </tr>
+      </table>
+    </center>
+  </div><!---  <script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+  </script> 
+  <script src="js/bootstrap.js"> 
+  </script> -->
+  <script src="../bootstrap/js/angular.js"></script>
+  <script type="text/javascript">        
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  var t="0.2342"
+  $scope.name = (Math.random()*10).toFixed(4);
+  $scope.ask =parseInt($scope.name) + 0.8430;
+  
+  $scope.name1 = (Math.random()*10).toFixed(4);
+  $scope.name2 = (Math.random()*10).toFixed(4);
+  $scope.name3 = (Math.random()*10).toFixed(4);
+  $scope.name4 = (Math.random()*10).toFixed(4);
+  $scope.name5 = (Math.random()*10).toFixed(4);
+  $interval(function () {
+      $scope.name = (Math.random()*10).toFixed(4);
+      $scope.ask =(parseFloat($scope.name) + 0.8798).toFixed(4);
+      $scope.name1 = (Math.random()*10).toFixed(4);
+      $scope.ask1 =(parseFloat($scope.name1) + 0.8798).toFixed(4);
+      $scope.name2 = (Math.random()*10).toFixed(4);
+      $scope.ask2 =(parseFloat($scope.name2) + 0.8798).toFixed(4);
+      $scope.name3 = (Math.random()*10).toFixed(4);
+      $scope.ask3 =(parseFloat($scope.name3) + 0.8798).toFixed(4);
+      $scope.name4 = (Math.random()*10).toFixed(4);
+      $scope.ask4=(parseFloat($scope.name4) + 0.8798).toFixed(4);
+      $scope.name5 = (Math.random()*10).toFixed(4);
+      $scope.ask5 =(parseFloat($scope.name5) + 0.8798).toFixed(4);
+  }, 1500);
+ 
+});
+
+</script>
+</script>
+  </script>
+</body>
+</html>
