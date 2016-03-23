@@ -22,7 +22,7 @@
             <a href="#">Exchange</a>
           </li>
           <li>
-            <a href="news.html">News</a>
+            <a href="FeedEk_demo.html">News</a>
           </li>
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -211,9 +211,9 @@
           <th>Currencies</th>
           <th>Amount</th>
           <th>Price</th>
-          <th>Date time</th>
+          <th>Date Time</th>
         </tr>
-        <tr ng-repeat="rowContent in rows">
+        <tr ng-repeat="rowContent in rows.slice().reverse()">
           <td style="background-color:{{ rowContent.color }};color:white;"> {{ rowContent.order }}</td>
           <td style="background-color:{{ rowContent.color }};color:white;">{{ rowContent.Currencies }}</td>
           <td style="background-color:{{ rowContent.color }};color:white;">{{ rowContent.amout }}</td>
@@ -251,7 +251,7 @@ app.controller('myCtrl', function($scope, $interval) {
       $scope.name = (Math.random()*10).toFixed(4);
        $scope.mybid = function() {
         // ----------------name function 0---------------------
-        $scope.amt=$scope.amt+(parseFloat($scope.name)*1000);
+           $scope.amt=parseFloat(($scope.amt+(parseFloat($scope.name)*1000)).toFixed(1));
            $scope.order="BUY";
            $scope.color="green";
            $scope.Currencies="USD/JSP";
@@ -282,7 +282,7 @@ app.controller('myCtrl', function($scope, $interval) {
             console.log("asdf");
           }
         else if($scope.amt>=0){
-         $scope.amt=$scope.amt-(parseFloat($scope.ask)*1000);
+         $scope.amt=parseFloat(($scope.amt-(parseFloat($scope.ask)*1000)).toFixed(1));
         $scope.order="SELL";
         $scope.color="red";
         $scope.Currencies="USD/JSP";
@@ -306,7 +306,7 @@ app.controller('myCtrl', function($scope, $interval) {
             // ----------------name function 1---------------------
       $scope.name1 = (Math.random()*10).toFixed(4);
              $scope.mybid1 = function() {
-        $scope.amt=$scope.amt+(parseFloat($scope.name1)*1000);
+              $scope.amt=parseFloat(($scope.amt+(parseFloat($scope.name1)*1000)).toFixed(1));
            $scope.order="BUY";
            $scope.color="green";
            $scope.Currencies="AUD/JSP";
@@ -335,7 +335,7 @@ app.controller('myCtrl', function($scope, $interval) {
             console.log("asdf");
           }
         else if($scope.amt>=0){
-         $scope.amt=$scope.amt-(parseFloat($scope.ask1)*1000);
+        $scope.amt=parseFloat(($scope.amt-(parseFloat($scope.ask1)*1000)).toFixed(1));
         $scope.order="SELL";
         $scope.color="red";
         $scope.Currencies="USD/JSP";
@@ -359,7 +359,7 @@ app.controller('myCtrl', function($scope, $interval) {
             // ----------------name function 2---------------------
       $scope.name2 = (Math.random()*10).toFixed(4);
              $scope.mybid2 = function() {
-        $scope.amt=$scope.amt+(parseFloat($scope.name2)*1000);
+        $scope.amt=parseFloat(($scope.amt+(parseFloat($scope.name2)*1000)).toFixed(1));
            $scope.order="BUY";
            $scope.color="green";
            $scope.Currencies="EUR/CAD";
@@ -388,10 +388,10 @@ app.controller('myCtrl', function($scope, $interval) {
             console.log("asdf");
           }
         else if($scope.amt>=0){
-         $scope.amt=$scope.amt-(parseFloat($scope.ask2)*1000);
+         $scope.amt=parseFloat(($scope.amt-(parseFloat($scope.ask2)*1000)).toFixed(1));
         $scope.order="SELL";
         $scope.color="red";
-        $scope.Currencies="USD/JSP";
+        $scope.Currencies="EUR/CAD";
         $scope.currentvalue=(parseFloat($scope.ask2));
          $scope.dt=new Date();
                    // --------code for dynamic row addition in table------
@@ -411,8 +411,10 @@ app.controller('myCtrl', function($scope, $interval) {
     }
             // ----------------name function 3---------------------
       $scope.name3 = (Math.random()*10).toFixed(4);
+
              $scope.mybid3 = function() {
-        $scope.amt=$scope.amt+(parseFloat($scope.name3)*1000);
+      //  $scope.amt=$scope.amt+(parseFloat($scope.name3)*1000);
+        $scope.amt=parseFloat(($scope.amt+(parseFloat($scope.name3)*1000)).toFixed(1));
            $scope.order="BUY";
            $scope.color="green";
            $scope.Currencies="USD/CNY";
@@ -441,10 +443,10 @@ app.controller('myCtrl', function($scope, $interval) {
             console.log("asdf");
           }
         else if($scope.amt>=0){
-         $scope.amt=$scope.amt-(parseFloat($scope.ask3)*1000);
+         $scope.amt=parseFloat(($scope.amt-(parseFloat($scope.ask3)*1000)).toFixed(1));
         $scope.order="SELL";
         $scope.color="red";
-        $scope.Currencies="USD/JSP";
+        $scope.Currencies="USD/CNY";
         $scope.currentvalue=(parseFloat($scope.ask3));
          $scope.dt=new Date();
                    // --------code for dynamic row addition in table------
@@ -465,7 +467,8 @@ app.controller('myCtrl', function($scope, $interval) {
             // ----------------name function 4---------------------
       $scope.name4 = (Math.random()*10).toFixed(4);
              $scope.mybid4 = function() {
-        $scope.amt=$scope.amt+(parseFloat($scope.name4)*1000);
+        //$scope.amt=$scope.amt+(parseFloat($scope.name4)*1000);
+        $scope.amt=parseFloat(($scope.amt+(parseFloat($scope.name4)*1000)).toFixed(1));
            $scope.order="BUY";
            $scope.color="green";
            $scope.Currencies="CAD/CNY";
@@ -494,10 +497,10 @@ app.controller('myCtrl', function($scope, $interval) {
             console.log("asdf");
           }
         else if($scope.amt>=0){
-         $scope.amt=$scope.amt-(parseFloat($scope.ask4)*1000);
+         $scope.amt=parseFloat(($scope.amt-(parseFloat($scope.ask4)*1000)).toFixed(1));
         $scope.order="SELL";
         $scope.color="red";
-        $scope.Currencies="USD/JSP";
+        $scope.Currencies="CAD/CNY";
         $scope.currentvalue=(parseFloat($scope.ask4));
          $scope.dt=new Date();
                    // --------code for dynamic row addition in table------
@@ -518,7 +521,8 @@ app.controller('myCtrl', function($scope, $interval) {
             // ----------------name function 5---------------------
       $scope.name5 = (Math.random()*10).toFixed(4);
              $scope.mybid5 = function() {
-        $scope.amt=$scope.amt+(parseFloat($scope.name5)*1000);
+       // $scope.amt=$scope.amt+(parseFloat($scope.name5)*1000);
+       $scope.amt=parseFloat(($scope.amt+(parseFloat($scope.name5)*1000)).toFixed(1));
            $scope.order="BUY";
            $scope.color="green";
            $scope.Currencies="GBP/USD";
@@ -547,10 +551,10 @@ app.controller('myCtrl', function($scope, $interval) {
             console.log("asdf");
           }
         else if($scope.amt>=0){
-         $scope.amt=$scope.amt-(parseFloat($scope.ask5)*1000);
+        $scope.amt=parseFloat(($scope.amt-(parseFloat($scope.ask5)*1000)).toFixed(1));
         $scope.order="SELL";
         $scope.color="red";
-        $scope.Currencies="USD/JSP";
+        $scope.Currencies="GBP/USD";
         $scope.currentvalue=(parseFloat($scope.ask5));
          $scope.dt=new Date();
                    // --------code for dynamic row addition in table------
@@ -577,8 +581,7 @@ app.controller('myCtrl', function($scope, $interval) {
 //
 
   $scope.amt=20000;
-  $scope.amt=parseFloat(($scope.amt).toFixed(4));
-
+  
    
 
 });
